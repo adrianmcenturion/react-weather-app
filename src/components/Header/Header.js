@@ -7,7 +7,7 @@ const Header = () => {
     const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <Flex align={'center'} bgColor='blue.400' borderRadius={6} p={4}>
+    <Flex align={'center'} bg={'rgba(255,255,255,0.06)'} borderRadius={6} border={'1px solid'} borderColor={'rgba(255,255,255,0.1)'} p={4}>
         <Heading fontSize={"2xl"} fontWeight="bold">React Weather App</Heading>
         <Spacer />
         <Flex>

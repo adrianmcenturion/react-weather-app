@@ -5,11 +5,9 @@ import Home from "./pages/Home/Home";
 
 const App = () => {
 
-  // const { colorMode, toggleColorMode } = useColorMode();
-
   return (
     <Provider store={store}>
-      <Box bg={useColorModeValue()} w='100%' h='100vh'>
+      <Box bg={useColorModeValue('blue.200', 'blue.900')} w='100%' h='100vh'>
         <Container maxW={{lg:'container.lg', md: 'container.md', sm: 'container.sm'}} >
           <Home />
         </Container>

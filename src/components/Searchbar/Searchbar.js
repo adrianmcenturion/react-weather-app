@@ -4,14 +4,9 @@ import { BiCurrentLocation } from "react-icons/bi";
 
 const Searchbar = ({handleClick, handleSubmit}) => {
 
-  // const handleSubmit2 = (e) => {
-  //   e.preventDefault();
-  //   console.log(e.target.search.value)
-  // }
-
   return (
 
-    <Flex align={'center'} bgColor='blue.400' borderRadius={6} p={2}>
+    <Flex align={'center'} bg={'rgba(255,255,255,0.06)'} borderRadius={6} border={'1px solid'} borderColor={'rgba(255,255,255,0.1)'} p={2}>
       <IconButton
       onClick={handleClick}
         aria-label="github"
@@ -21,7 +16,7 @@ const Searchbar = ({handleClick, handleSubmit}) => {
         icon={<BiCurrentLocation size="28px" />}>
       </IconButton>
       <Flex as={'form'} w='100%' align={'center'} onSubmit={handleSubmit}>
-        <Input borderColor={useColorModeValue()} size='sm' name="search" />
+        <Input borderColor={useColorModeValue('black.300')} size='sm' name="search" placeholder="Search cities"/>
         <IconButton
           type="submit"
           aria-label="github"

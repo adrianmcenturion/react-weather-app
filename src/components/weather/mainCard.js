@@ -6,7 +6,7 @@ const MainCard = ({data, isLoading}) => {
     const [isMobile] = useMediaQuery('(max-width: 786px)')
 
   return (
-    <Box bg={'red.300'} borderRadius={6} p={4} display={isLoading ? 'none' : 'block'}>
+    <Box bg={'rgba(255,255,255,0.06)'} borderRadius={6} border={'1px solid'} borderColor={'rgba(255,255,255,0.1)'} p={4} display={isLoading ? 'none' : 'block'} backdropBlur={'(20px)'}>
         <Flex>
             <Text fontSize={"2xl"}>Current Weather</Text>
             <Spacer />

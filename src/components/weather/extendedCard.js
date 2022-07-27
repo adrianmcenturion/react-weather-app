@@ -8,7 +8,7 @@ const ExtendedCard =  ({data, loading}) => {
     
     return (
 
-    <Box bg={'red.300'} borderRadius={6} p={4}>
+    <Box bg={'rgba(255,255,255,0.06)'} borderRadius={6} border={'1px solid'} borderColor={'rgba(255,255,255,0.1)'} p={4}>
             <Text fontSize={"2xl"}>Extended Weather</Text>
         <Flex flexDirection={isMobile ? 'column' : 'row'} mt={4}>
             {data.map((d, i) => {
