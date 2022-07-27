@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const useGeoLocation = () => {
 
@@ -21,13 +21,10 @@ const useGeoLocation = () => {
         return location
 
     }
-
-    useEffect(() => {
         if(location === null) {
             getGeoLocation()   
         }
-      }, [])
-
+        
     return { location, getGeoLocation }
 }
 

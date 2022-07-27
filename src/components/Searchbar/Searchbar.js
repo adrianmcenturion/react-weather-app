@@ -4,10 +4,10 @@ import { BiCurrentLocation } from "react-icons/bi";
 
 const Searchbar = ({handleClick, handleSubmit}) => {
 
-  const handleSubmit2 = (e) => {
-    e.preventDefault();
-    console.log(e.target.search.value)
-  }
+  // const handleSubmit2 = (e) => {
+  //   e.preventDefault();
+  //   console.log(e.target.search.value)
+  // }
 
   return (
 

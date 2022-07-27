@@ -1,4 +1,4 @@
-import { Flex, Text, Spacer, colorMode, useColorMode, IconButton, Heading } from "@chakra-ui/react";
+import { Flex, Spacer, useColorMode, IconButton, Heading } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import { BsGithub, BsLinkedin } from 'react-icons/bs';
 
