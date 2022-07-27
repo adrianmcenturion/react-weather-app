@@ -2,10 +2,20 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { extendTheme, ChakraProvider } from '@chakra-ui/react'
+import { mode } from '@chakra-ui/theme-tools';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-const theme = extendTheme()
+const theme = extendTheme({
+  styles: {
+    global: (props) => ({
+      body: {
+        bg: mode('blue.300', 'black')(props),
+        color: mode('black', 'white')(props),
+      },
+    }),
+  },
+})
 
 root.render(
   <ChakraProvider theme={theme}>

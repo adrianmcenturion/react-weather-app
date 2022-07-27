@@ -7,7 +7,7 @@ const App = () => {
 
   return (
     <Provider store={store}>
-      <Box bg={useColorModeValue('blue.200', 'blue.900')} w='100%' h='100vh'>
+      <Box >
         <Container maxW={{lg:'container.lg', md: 'container.md', sm: 'container.sm'}} >
           <Home />
         </Container>
