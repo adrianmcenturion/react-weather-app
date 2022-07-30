@@ -29,10 +29,10 @@ const ExtendedCard =  ({data, loading}) => {
             {data.map((d, i) => {                     
                 return(
                     <Grid display={isMobile ? 'grid' : 'none'} templateColumns='25% 15% 30% 30%' key={i}>
-                        <GridItem w='100%' h='10' justifyContent={'center'} ><Text fontSize={'smaller'}>{getDate(d.dt)}</Text></GridItem>
-                        <GridItem w='100%' h='10' align="center" justifyContent={'center'} ><Image boxSize={'30px'} src={`/${d.icon}.svg`}></Image></GridItem>
-                        <GridItem w='100%' h='10' align="center" justifyContent={'center'} ><Text fontSize={'small'} textTransform={'capitalize'}>{d.description}</Text></GridItem>
-                        <GridItem w='100%' h='10' align="center" justifyContent={'center'} >
+                        <GridItem display='grid' w='100%' h='10' alignContent={'center'} ><Text fontSize={'smaller'}>{getDate(d.dt)}</Text></GridItem>
+                        <GridItem display='grid' w='100%' h='10' align="center" alignContent={'center'} ><Image boxSize={'30px'} src={`/${d.icon}.svg`}></Image></GridItem>
+                        <GridItem display='grid' w='100%' h='10' align="center" alignContent={'center'} ><Text fontSize={'small'} textTransform={'capitalize'}>{d.description}</Text></GridItem>
+                        <GridItem display='grid' w='100%' h='10' align="center" alignContent={'center'} >
                             <Flex align="center" justifyContent={'center'}>
                                 <Image boxSize={'30px'} src="/caret-up-solid.svg"></Image>
                                 <Text fontSize={'smaller'}>{d.max}</Text>
