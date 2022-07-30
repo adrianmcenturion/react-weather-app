@@ -23,7 +23,7 @@ const Header = () => {
                 />
                 <IconButton 
                     as={'a'}
-                    href={'https://github.com/adrianmcenturion'}
+                    href={'https://github.com/adrianmcenturion/react-weather-app'}
                     target="_blank" rel="noopener noreferrer"
                     aria-label="github"
                     variant="ghost"
