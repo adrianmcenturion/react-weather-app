@@ -51,7 +51,16 @@ const MainCard = ({data, isLoading}) => {
                         </Flex>
                     </Flex>
                     <Flex alignItems={'center'}>
-                        <Text>{data.wind}km/h</Text>
+                        <Text>{data.wind} km/h</Text>
+                    </Flex>
+                    <Flex alignItems={'center'}>
+                        <Flex align={'center'}>
+                                <Image boxSize={'30px'} src="/barometer.svg"></Image>
+                                <Text>Pressure</Text>
+                        </Flex>
+                    </Flex>
+                    <Flex alignItems={'center'}>
+                        <Text>{data.pressure} hPa</Text>
                     </Flex>
                 </SimpleGrid>
             </Flex>

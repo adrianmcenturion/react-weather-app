@@ -11,6 +11,7 @@
     min: (weather.weatherData.daily[0].temp.min).toFixed(0),
     max: (weather.weatherData.daily[0].temp.min).toFixed(0),
     humidity: weather.weatherData.current.humidity,
+    pressure: weather.weatherData.current.pressure,
     wind: weather.weatherData.current.wind_speed,
     icon: weather.weatherData.current.weather[0].icon,
     daily: [ 
