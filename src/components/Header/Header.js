@@ -18,7 +18,7 @@ const Header = () => {
                     aria-label="linkedin"
                     variant="ghost"
                     size="md"
-                    _hover={{ bg: '#0D74FF' }}
+                    _hover={colorMode === 'light' ? { bg: 'purple.300' } : { bg: 'blackAlpha.700' }}
                     icon={<BsLinkedin size="28px" />}
                 />
                 <IconButton 
@@ -28,13 +28,13 @@ const Header = () => {
                     aria-label="github"
                     variant="ghost"
                     size="md"
-                    _hover={{ bg: '#0D74FF' }}
+                    _hover={colorMode === 'light' ? { bg: 'purple.300' } : { bg: 'blackAlpha.700' }}
                     icon={<BsGithub size="28px" />}
                 />
             <IconButton onClick={toggleColorMode}
                     variant="ghost"
                     size="md"
-                    _hover={{ bg: '#0D74FF' }}>
+                    _hover={colorMode === 'light' ? { bg: 'purple.300' } : { bg: 'blackAlpha.700' }}>
                     {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
             </IconButton>
         </Flex>
