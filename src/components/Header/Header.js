@@ -8,7 +8,7 @@ const Header = () => {
 
   return (
     <Flex align={'center'} bg={'rgba(255,255,255,0.06)'} borderRadius={6} border={'1px solid'} borderColor={'rgba(255,255,255,0.1)'} p={4}>
-        <Heading fontSize={"2xl"} fontWeight="bold">React Weather App</Heading>
+        <Heading fontSize={{md: "2xl", base: 'xl'}} fontWeight="bold">React Weather App</Heading>
         <Spacer />
         <Flex>
                 <IconButton
@@ -18,7 +18,6 @@ const Header = () => {
                     aria-label="linkedin"
                     variant="ghost"
                     size="md"
-                    // isRound={true}
                     _hover={{ bg: '#0D74FF' }}
                     icon={<BsLinkedin size="28px" />}
                 />
@@ -29,14 +28,12 @@ const Header = () => {
                     aria-label="github"
                     variant="ghost"
                     size="md"
-                    // isRound={true}
                     _hover={{ bg: '#0D74FF' }}
                     icon={<BsGithub size="28px" />}
                 />
             <IconButton onClick={toggleColorMode}
                     variant="ghost"
                     size="md"
-                    // isRound={true}
                     _hover={{ bg: '#0D74FF' }}>
                     {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
             </IconButton>

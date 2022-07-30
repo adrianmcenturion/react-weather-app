@@ -11,7 +11,7 @@ import { setData, setIsLoading } from "../../redux/states/app";
 
 import useGeoLocation from '../../hooks/useGeoLocation'
 import useFetch from "../../hooks/useFetch"
-import Loading from "../../components/loading";
+import Loading from "../../components/utils/loading";
 
 const Home = () => {
   
@@ -30,9 +30,7 @@ const Home = () => {
 
   }
   
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    const data = e.target.search.value
+  const functionSubmit = async (data) => {
     dispatch(setIsLoading(true))
     dispatch(modifyWeather(weatherDataAdapter(await fetch.requestByCity(data))))
     dispatch(setIsLoading(false))
@@ -44,7 +42,7 @@ const Home = () => {
   return (
     <Box display={'flex'} h='100%' flexDirection="column" gap={2} py={4}>
       <Header/>
-      <Searchbar handleSubmit={handleSubmit} handleClick={handleGeoLocation}/>
+      <Searchbar handleDispatchSubmit={functionSubmit} handleClick={handleGeoLocation}/>
       {isLoading ? <Loading /> : <WeatherComponent/>}
     </Box>
   )

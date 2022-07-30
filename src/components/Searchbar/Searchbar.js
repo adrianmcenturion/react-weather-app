@@ -1,8 +1,22 @@
-import { Flex, Input, IconButton, useColorModeValue } from "@chakra-ui/react"
+import { Flex, Input, IconButton, useColorModeValue, FormErrorMessage, useToast } from "@chakra-ui/react"
 import { Search2Icon } from "@chakra-ui/icons"
 import { BiCurrentLocation } from "react-icons/bi";
+import { toastSearch } from "../utils/toasts";
 
-const Searchbar = ({handleClick, handleSubmit}) => {
+const Searchbar = ({handleClick, handleDispatchSubmit}) => {
+
+  const toast = useToast()
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const data = e.target.search.value
+    if(data === '' || data.length < 4) {
+      toast(toastSearch)
+      return
+    }
+    handleDispatchSubmit(data)
+  }
+  
 
   return (
 
@@ -17,6 +31,7 @@ const Searchbar = ({handleClick, handleSubmit}) => {
       </IconButton>
       <Flex as={'form'} w='100%' align={'center'} onSubmit={handleSubmit}>
         <Input borderColor={useColorModeValue('black.300')} size='sm' name="search" placeholder="Search cities"/>
+        <FormErrorMessage>Write a city to search.</FormErrorMessage>
         <IconButton
           type="submit"
           aria-label="github"
