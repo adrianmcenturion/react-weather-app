@@ -47,15 +47,16 @@ const useFetch = () => {
           lon: responseGeo.data.results[0].geometry.lng,
         }
 
-        result.geoData = responseGeo.data 
+        result = {...result, geoData: responseGeo.data}
         const responseWeather = await Promise.all([axiosWeatherInstance(weatherUrl, ubication).get()])
-        result.weatherData = responseWeather[0].data
+        result = {...result, weatherData: responseWeather[0].data}
 
     } catch (error) {
 
       setError(true)
       console.log(error)
       setIsLoading(false)
+      throw new Error(error)
       
     }
 
